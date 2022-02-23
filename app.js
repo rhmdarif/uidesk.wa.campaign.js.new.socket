@@ -19,13 +19,15 @@ io.on("connection", (socket) => {
     // IN - SERVER
     // OUT - SERVER
     socket.on("qr", (token, datas) => {
-        console.log(token, datas);
+        console.log("qr", token, datas);
         io.emit("qr-"+token, datas);
     });
     socket.on("logged", (token, datas) => {
+        console.log("logged", token, datas);
         io.emit("logged-"+token, datas);
     });
     socket.on("logout", (datas) => {
+        console.log("logout", token, datas);
         io.emit("logout", datas);
     });
     // IN - CLIENT
