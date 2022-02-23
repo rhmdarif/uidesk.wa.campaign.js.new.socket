@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  },
+  "name": "uidesk.wa.campaign.js.new.socket",
+  "version": "1.0.0",
+  "description": "Socket saja",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "Rahmad Arif",
+  "license": "ISC"
+}
