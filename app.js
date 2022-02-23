@@ -1,7 +1,20 @@
+const express = require("express");
+const { createServer } = require("http");
 const { Server } = require("socket.io");
 const appPort = process.env.APP_PORT || "3000";
 
-const io = new Server({ /* options */ });
+const app = express();
+const httpServer = createServer(app);
+
+const io = require("socket.io")(httpServer);
+
+app.get("/", (req, res) => {
+    res
+      .status(200)
+      .send(
+        "Baileys API using express."
+      );
+  });
 
 io.on("connection", (socket) => {
     // IN - SERVER
@@ -20,4 +33,7 @@ io.on("connection", (socket) => {
     // OUT - CLIENT
 });
 
-io.listen(appPort);
+httpServer.listen(appPort, () => {
+    console.log(`Example app listening at http://localhost:${appPort}`);
+  });
+  

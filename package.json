@@ -1,12 +1,13 @@
 {
   "dependencies": {
+    "express": "^4.17.3",
+    "http": "^0.0.1-security",
     "socket.io": "^4.4.1"
   },
   "name": "uidesk.wa.campaign.js.new.socket",
   "version": "1.0.0",
   "description": "Socket saja",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "node app",
     "start": "node app"
