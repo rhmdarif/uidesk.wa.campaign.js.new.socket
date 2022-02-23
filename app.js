@@ -32,7 +32,15 @@ io.on("connection", (socket) => {
     // OUT - CLIENT
 });
 
-httpServer.listen(appPort, () => {
-    console.log(`Example app listening at http://localhost:${appPort}`);
-  });
+ 
+// Start the server
+const PORT = process.env.PORT || 8080;
+httpServer.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
+
+// httpServer.listen(appPort, () => {
+//     console.log(`Example app listening at http://localhost:${appPort}`);
+//   });
   
