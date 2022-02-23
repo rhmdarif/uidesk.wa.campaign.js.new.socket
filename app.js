@@ -1,4 +1,5 @@
 const { Server } = require("socket.io");
+const appPort = process.env.APP_PORT || "3000";
 
 const io = new Server({ /* options */ });
 
@@ -19,4 +20,4 @@ io.on("connection", (socket) => {
     // OUT - CLIENT
 });
 
-io.listen(3000);
+io.listen(appPort);
