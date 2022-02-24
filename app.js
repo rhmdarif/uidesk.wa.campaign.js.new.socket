@@ -31,6 +31,10 @@ io.on("connection", (socket) => {
         io.emit("logout", datas);
     });
     // IN - CLIENT
+    socket.on("conversation", (token, datas) => {
+      console.log("conversation", token, datas);
+      io.emit("conversation-"+token, datas);
+  });
 
     // OUT - CLIENT
 });
