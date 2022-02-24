@@ -5,7 +5,11 @@ const appPort = process.env.APP_PORT || "3000";
 const app = express();
 const httpServer = createServer(app);
 
-const io = require("socket.io")(httpServer);
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: ["https://omnichannel.uidesk.id", "http://103.66.46.141:3000"]
+  }
+});
 
 app.get("/", (req, res) => {
     res
