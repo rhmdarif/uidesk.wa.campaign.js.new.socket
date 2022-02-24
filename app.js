@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
         io.emit("logged-"+token, datas);
     });
     socket.on("logout", (datas) => {
-        console.log("logout", token, datas);
+        console.log("logout", datas);
         io.emit("logout", datas);
     });
     // IN - CLIENT
